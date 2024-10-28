@@ -36,7 +36,6 @@ public class NumberGussingGame {
                     System.out.println("number is too low");
                 } else if (gussnum>target) {
                     System.out.println("number is too high");
-
                 }
                 else {
                     System.out.println("congratulations"+target);
@@ -45,15 +44,13 @@ public class NumberGussingGame {
                     System.out.println("points earned"+points);
                     totalScore+=points;
                 }
-            }
-            if(!guss){
+            }if(!guss){
                 System.out.println("sorry,all attempts are used");
                 System.out.println("correct number is:"+target);
             }
         }
         System.out.println("\ngame over! your total score "+totalScore);
         System.out.println("thanks for playing");
-
         sc.close();
     }
 }

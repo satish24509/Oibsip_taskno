@@ -2,7 +2,6 @@ package org.example;
 class ATM {
     public Bank bank;
     private User currentUser;
-
     public ATM(Bank bank) {
         this.bank = bank;
         this.currentUser = null;
@@ -21,7 +20,6 @@ class ATM {
         this.currentUser = null;
         System.out.println("Logged out successfully..");
     }
-
     public User getCurrentUser() {
         return currentUser;
     }

@@ -5,7 +5,6 @@ public class Transection {
     private String type;
     private double amount;
     private Date date;
-
     public Transection(String type, double amount) {
         this.type = type;
         this.amount = amount;

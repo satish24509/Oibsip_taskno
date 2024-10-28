@@ -1,28 +1,23 @@
 package org.example;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ATMInterface {
     private ATM atm;
     private Scanner scanner;
-
     public ATMInterface(ATM atm) {
         this.atm = atm;
         this.scanner = new Scanner(System.in);
     }
-
     public void start() {
         System.out.println("Welcome to the ATM.");
         System.out.print("Enter User ID: ");
         String userId = scanner.nextLine();
         System.out.print("Enter PIN: ");
         String pin = scanner.nextLine();
-
         if (!atm.login(userId, pin)) {
             return;
         }
-
         while (true) {
             System.out.println("\nChoose an option:");
             System.out.println("1. Transaction History");
@@ -30,9 +25,7 @@ public class ATMInterface {
             System.out.println("3. Deposit");
             System.out.println("4. Transfer");
             System.out.println("5. Quit");
-
             String choice = scanner.nextLine();
-
             switch (choice) {
                 case "1":
                     showTransHistory();
@@ -77,7 +70,6 @@ public class ATMInterface {
             System.out.println("Insufficient balance/invalid amount.");
         }
     }
-
     private void deposit() {
         System.out.print("Plese enter amount to deposit: ₹");
         double amount = scanner.nextDouble();
@@ -88,7 +80,6 @@ public class ATMInterface {
             System.out.println("Insufficient balance/invalid amount.");
         }
     }
-
     private void transfer() {
         System.out.print("Please enter recipient User ID: ");
         String recipientId = scanner.nextLine();
